@@ -131,7 +131,7 @@ function toHTML(){
 	var hrefString=$("#css").attr("href").toString();
 	html=html+hrefString.substring(hrefString.lastIndexOf("/"));
 
-	html=html+"'/>";
+	html=html+"'/>\n";
 	html=html+$(".syntaxhighlighter").parent().html();
 	$("#html_div textarea").val(html);
 	if($("#to_html").attr("checked"))
