@@ -134,6 +134,8 @@ function toHTML(){
 
 	html=html+"'/>\n";
 	html=html+$(".syntaxhighlighter").parent().html();
+	var html = html.substring(0,html.lastIndexOf("</div>"));
+	html=html+"\n</div>";
 	$("#html_div textarea").val(html);
 	if($("#to_html").attr("checked"))
 	{

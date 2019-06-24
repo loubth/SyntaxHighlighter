@@ -136,10 +136,13 @@ function toHTML(){
 	$(".toolbar").remove();
 	var html="<link rel='stylesheet' type='text/css' href='https://loubth.github.io/collection/css/Syntaxhighlighter";
 	var hrefString=$("#css").attr("href").toString();
+
 	html=html+hrefString.substring(hrefString.lastIndexOf("/"));
 
 	html=html+"'/>\n";
 	html=html+$(".syntaxhighlighter").parent().html();
+	var html = html.substring(0,html.lastIndexOf("</div>"));
+	html=html+"\n</div>";
 	$("#html_div textarea").val(html);
 	if($("#to_html").attr("checked"))
 	{
